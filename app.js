@@ -1,8 +1,8 @@
-const express = require('express')
-const next = require('next')
-const bodyParser = require('body-parser')
+import express from 'express'
+import next from 'next'
+import bodyParser from 'body-parser'
 
-const { graphQLHandler } = require('./server')
+import { graphQLHandler } from './server'
 
 const dev = process.env.NODE_ENV !== 'production'
 const nextApp = next({ dev })

@@ -1,18 +1,14 @@
-const { graphqlExpress } = require('graphql-server-express')
-const { makeExecutableSchema } = require('graphql-tools')
-const typeDefs = require('./typeDefs')
-const resolvers = require('./resolvers/hardCoded')
+import { graphqlExpress } from 'graphql-server-express'
+import { makeExecutableSchema } from 'graphql-tools'
+import typeDefs from './typeDefs'
+import resolvers from './resolvers/hardCoded'
 
 const schema = makeExecutableSchema({
   typeDefs,
   resolvers
 })
 
-const graphQLHandler = graphqlExpress({
+export const graphQLHandler = graphqlExpress({
     schema,
     //rootValue: data
 })
-
-module.exports = {
-    graphQLHandler
-}

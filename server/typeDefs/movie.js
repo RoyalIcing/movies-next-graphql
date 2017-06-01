@@ -1,4 +1,4 @@
-module.exports = `
+export default `
 type Movie {
   title: String!
   description: String!
