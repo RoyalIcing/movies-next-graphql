@@ -1,5 +1,5 @@
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
-import 'isomorphic-unfetch'
+import 'isomorphic-fetch'
 
 export default new ApolloClient({
   networkInterface: createNetworkInterface({
