@@ -11,8 +11,8 @@ export default ({
         <div>
             Directors:
         {
-            directors.map(director => (
-                <span>{ director.name }</span>
+            directors.map((director, index) => (
+                <span key={index}>{ director.name }</span>
             ))
         }
         </div>
