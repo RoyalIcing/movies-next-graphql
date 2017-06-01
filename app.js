@@ -2,7 +2,7 @@ const express = require('express')
 const next = require('next')
 const bodyParser = require('body-parser')
 
-const { graphQLHandler } = require('./graphql')
+const { graphQLHandler } = require('./server')
 
 const dev = process.env.NODE_ENV !== 'production'
 const nextApp = next({ dev })

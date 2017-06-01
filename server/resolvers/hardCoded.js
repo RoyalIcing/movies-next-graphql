@@ -8,6 +8,15 @@ const data = {
             writers: ['Jeff Nathanson', 'Jeff Nathanson'],
             cast: ['Johnny Depp', 'Geoffrey Rush', 'Javier Bardem'],
             imdbURL: 'http://www.imdb.com/title/tt1790809/?ref_=inth_ov_tt'
+        },
+        {
+            title: 'Taxi Driver',
+            yearReleased: 1976,
+            genres: ['drama', 'crime'],
+            directors: ['Martin Scorsese'],
+            writers: ['Paul Schrader'],
+            cast: ['Robert De Niro', 'Jodie Foster', 'Cybill Shepherd'],
+            imdbURL: 'http://www.imdb.com/title/tt0075314'
         }
     ]
 }
@@ -21,7 +30,13 @@ const resolvers = {
 			}
 			return movies
 		}
-	}
+	},
+
+    Person: {
+        name(obj) {
+            return obj
+        }
+    }
 }
 
 module.exports = resolvers
